@@ -1,0 +1,31 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    background-color:black;
+    color:white;
+}
+
+.center_div{
+    text-align:center;
+    margin:15% auto;
+}
+
+.myNumber{
+    color:yellow;
+    font-size:5rem;
+}
+
+.button2{
+    border: ridge 5px whitesmoke;
+    box-shadow: 0.5rem 0.2rem 20rem 0.1rem whitesmoke, 1rem -1rem 8rem 1rem silver inset;
+    border-radius:1.5rem;
+    padding: 3% 7%;
+    text-align:center;
+    font-size:2rem;
+}
+
+.container{
+    display:flex;
+    justify-content: space-around;
+}

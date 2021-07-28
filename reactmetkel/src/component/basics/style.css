@@ -1,0 +1,41 @@
+.card-number {
+    font-size: 2rem;
+    color: green;
+    margin: auto 46%;
+    text-decoration: olive overline underline;
+}
+.card-container {
+    width: 30%;
+    height: 40%;
+    margin: 3%;
+    background-color: whitesmoke;
+    padding: 2%;
+    border-radius: 1rem;
+    border: thin silver solid;
+}
+.card-author {
+    font-size: 2rem;
+    color: purple;
+    text-decoration: underline;
+    font-weight: 600;
+}
+.card-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.card-tag {
+    padding: 0.2rem 0.3rem;
+    background-color: silver;
+    border-radius: 1rem;
+    border: thin solid black;
+    width: 40%;
+    text-align: center;
+}
+.card-description {
+    text-align: justify;
+    font-weight: 450;
+}
+.card-tag:hover {
+    background-color: rgb(39, 38, 38);
+    color: white;
+}
