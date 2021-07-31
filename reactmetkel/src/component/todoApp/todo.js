@@ -82,24 +82,17 @@ const Todo = () => {
                                 setInputData(e.target.value);
                             }}
                         />
-                        {/* <i
-                            className="fa fa-plus add-btn"
-                            onClick={() => addItems}
-                        ></i> */}
+
                         {toggleButton ? (
-                            <button
-                                className="fa add-btn"
+                            <i
+                                className="fa fa-edit add-btn"
                                 onClick={() => addItems()}
-                            >
-                                ✍
-                            </button>
+                            ></i>
                         ) : (
-                            <button
-                                className="fa add-btn"
+                            <i
+                                className="fa fa-plus add-btn"
                                 onClick={() => addItems()}
-                            >
-                                ➕
-                            </button>
+                            ></i>
                         )}
                     </div>
 
@@ -110,17 +103,13 @@ const Todo = () => {
                                     <h3>{item.name}</h3>
                                     <div className="todo-btn">
                                         <i
-                                            className="far add-btn"
+                                            className="far fa-edit add-btn"
                                             onClick={() => editItem(item.id)}
-                                        >
-                                            edit
-                                        </i>
+                                        ></i>
                                         <i
-                                            className="far add-btn"
+                                            className="far fa-trash-alt add-btn"
                                             onClick={() => deleteItem(item.id)}
-                                        >
-                                            delete
-                                        </i>
+                                        ></i>
                                     </div>
                                 </div>
                             );

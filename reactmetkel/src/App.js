@@ -4,7 +4,8 @@ import React from 'react';
 // import UseState from './component/Hooks/useState';
 // import UseEffect from './component/Hooks/useEffect';
 // import UseReducer from './component/Hooks/useReducer';
-import Todo from './component/todoApp/todo';
+// import Todo from './component/todoApp/todo';
+import Temperature from './component/weatherApp/temperature';
 
 /*
 Three things to keep in mind while creating react componenets:
@@ -20,7 +21,8 @@ const App = () => {
             {/* <UseState /> */}
             {/* <UseEffect /> */}
             {/* <UseReducer /> */}
-            <Todo />
+            {/* <Todo /> */}
+            <Temperature />
         </>
     );
 };
