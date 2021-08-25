@@ -1,11 +1,13 @@
 import React from 'react';
+import CompA from './component/Hooks/useContext/compA';
+// import Redux from './component/Hooks/redux';
 // after react 17.0 we don't need to write
 // import Restaurant from './component/basics/Restaurant';
 // import UseState from './component/Hooks/useState';
 // import UseEffect from './component/Hooks/useEffect';
 // import UseReducer from './component/Hooks/useReducer';
 // import Todo from './component/todoApp/todo';
-import Temperature from './component/weatherApp/temperature';
+// import Temperature from './component/weatherApp/temperature';
 
 /*
 Three things to keep in mind while creating react componenets:
@@ -22,7 +24,9 @@ const App = () => {
             {/* <UseEffect /> */}
             {/* <UseReducer /> */}
             {/* <Todo /> */}
-            <Temperature />
+            {/* <Temperature /> */}
+            {/* <Redux /> */}
+            <CompA />
         </>
     );
 };
