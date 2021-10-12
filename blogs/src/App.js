@@ -1,32 +1,35 @@
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { useState } from 'react';
+
 import Navbar from './Navbar';
 import Home from './Home';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Create from './Create';
 import BlogDetails from './BlogDetails';
 import NotFound from './NotFound';
-import EditBlog from './editBlog';
 
 function App() {
+    const [dark, setDark] = useState(false);
+    console.log(dark);
+    if (dark) {
+        document.body.style.backgroundColor = 'black';
+    } else document.body.style.backgroundColor = 'white';
     return (
         <Router>
             <div className="App">
-                <Navbar />
+                <Navbar setDark={setDark} dark={dark} />
                 <div className="content">
                     <Switch>
                         <Route exact path="/">
-                            <Home />
+                            <Home setDark={setDark} dark={dark} />
                         </Route>
                         <Route path="/create">
-                            <Create />
+                            <Create setDark={setDark} dark={dark} />
                         </Route>
                         <Route path="/blogs/:id">
-                            <BlogDetails />
+                            <BlogDetails setDark={setDark} dark={dark} />
                         </Route>
-                        {/* <Route path="/edit">
-                            <EditBlog />
-                        </Route> */}
                         <Route path="*">
-                            <NotFound />
+                            <NotFound setDark={setDark} dark={dark} />
                         </Route>
                     </Switch>
                 </div>

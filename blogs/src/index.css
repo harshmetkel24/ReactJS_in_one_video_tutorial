@@ -10,12 +10,13 @@
     padding: 20px;
     display: flex;
     align-items: center;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
-    border-bottom: 1px solid #f2f2f2;
+    border-bottom: 2px solid #000;
+    box-shadow: 0 3px 10px 2px black;
 }
 .navbar h1 {
-    color: #f1356d;
+    color: #0066b2;
 }
 .navbar .links {
     margin-left: auto;
@@ -26,10 +27,10 @@
     padding: 6px;
 }
 .navbar a:hover {
-    color: #f1356d;
+    color: #0066b2;
 }
 .content {
-    max-width: 600px;
+    max-width: 800px;
     margin: 40px auto;
     padding: 20px;
 }
@@ -45,7 +46,7 @@
 }
 .blog-preview h2 {
     font-size: 20px;
-    color: #f1356d;
+    color: #0066b2;
     margin-bottom: 8px;
 }
 .blog-preview a {
@@ -55,14 +56,14 @@
 /* blog details page */
 .blog-details h2 {
     font-size: 20px;
-    color: #f1356d;
+    color: #0066b2;
     margin-bottom: 10px;
 }
 .blog-details div {
     margin: 20px 0;
 }
 .blog-details button {
-    background: #f1356d;
+    background: #0066b2;
     color: #fff;
     border: 0;
     padding: 8px;
@@ -82,7 +83,7 @@
 }
 .create h2 {
     font-size: 20px;
-    color: #f1356d;
+    color: #0066b2;
     margin-bottom: 30px;
 }
 .create input,
@@ -96,7 +97,7 @@
     display: block;
 }
 .create button {
-    background: #f1356d;
+    background: #0066b2;
     color: #fff;
     border: 0;
     padding: 8px;

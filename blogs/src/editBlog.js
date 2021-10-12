@@ -5,7 +5,13 @@ import { useHistory } from 'react-router';
 const EditBlog = ({ blog }) => {
     const history = useHistory();
     const handleEdit = () => {
-        const newBlog = { title: newTitle, body: newBody, author: blog.author };
+        const d = new Date();
+        const newBlog = {
+            title: newTitle,
+            body: newBody,
+            author: blog.author,
+            updatedOn: d.toDateString(),
+        };
         console.log(newBlog);
         fetch('http://localhost:8000/blogs/' + blog.id, {
             method: 'PUT',
@@ -21,7 +27,15 @@ const EditBlog = ({ blog }) => {
 
     return (
         <div>
-            <h1>Edit Blog</h1>
+            <h1
+                style={{
+                    textDecoration: 'underline',
+                    marginBottom: '1em',
+                    fontSize: '1.8em',
+                }}
+            >
+                Edit Blog
+            </h1>
             <label
                 htmlFor=""
                 style={{
@@ -34,7 +48,12 @@ const EditBlog = ({ blog }) => {
             </label>
             <input
                 type="text"
-                style={{ mtargin: '1em' }}
+                style={{
+                    mtargin: '1em',
+                    borderRadius: '0.5em',
+                    padding: '0.2em 0.5em',
+                    fontSize: '1.1em',
+                }}
                 value={newTitle}
                 onChange={(e) => {
                     setNewTitle(e.target.value);
@@ -55,7 +74,8 @@ const EditBlog = ({ blog }) => {
             <textarea
                 value={newBody}
                 style={{
-                    width: '550px',
+                    width: '700px',
+                    maxWidth: '800px',
                     height: '10em',
                     margin: 'auto',
                     borderRadius: '0.8em ',
@@ -65,7 +85,14 @@ const EditBlog = ({ blog }) => {
                     setNewBody(e.target.value);
                 }}
             ></textarea>
-            <button onClick={() => handleEdit()} style={{ margin: '1em' }}>
+            <button
+                onClick={() => handleEdit()}
+                style={{
+                    margin: '1em auto 1em auto',
+                    padding: '0.5em',
+                    width: '70px',
+                }}
+            >
                 Save
             </button>
         </div>

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-const Create = () => {
+const Create = ({ dark }) => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('mario');
@@ -9,8 +9,9 @@ const Create = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault(); // default submit shoudl not happen
-        const blog = { title, body, author };
-
+        const d = new Date();
+        const blog = { title, body, author, createdAt: d.toDateString() };
+        console.log(blog);
         fetch('http://localhost:8000/blogs/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -26,20 +27,50 @@ const Create = () => {
         <div className="create">
             <h2>Add a New Blog</h2>
             <form onSubmit={handleSubmit}>
-                <label>Blog title:</label>
+                <label
+                    style={
+                        dark
+                            ? {
+                                  color: 'white',
+                              }
+                            : {}
+                    }
+                >
+                    Blog title:
+                </label>
                 <input
                     type="text"
                     required
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                 />
-                <label>Blog body:</label>
+                <label
+                    style={
+                        dark
+                            ? {
+                                  color: 'white',
+                              }
+                            : {}
+                    }
+                >
+                    Blog body:
+                </label>
                 <textarea
                     required
                     value={body}
                     onChange={(e) => setBody(e.target.value)}
                 ></textarea>
-                <label>Blog author:</label>
+                <label
+                    style={
+                        dark
+                            ? {
+                                  color: 'white',
+                              }
+                            : {}
+                    }
+                >
+                    Blog author:
+                </label>
                 <select
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
